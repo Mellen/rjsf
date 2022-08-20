@@ -1,3 +1,5 @@
+//Copyright 2022 Matt Ellen Atmosphere Software License Version 0.4–🚪🌳🛂💸
+
 export const rjsf = (function()
 {
   function AppBuilder(baseElement)
@@ -78,7 +80,26 @@ export const rjsf = (function()
   AppBuilder.prototype.updateElement = function(el)
   {
     const property = el.dataset.model;
-    el.textContent = this.data[property];
+    if(el.tagname === 'RJSF-IF')
+    {
+      this.rjsfif(el, property)
+    }
+    else
+    {
+      el.textContent = this.data[property];
+    }
+  };
+
+  AppBuilder.prototype.rjsfif = function(el, prop)
+  {
+    if(this.data[property])
+    {
+      el.style='display:none;';
+    }
+    else
+    {
+      el.style='display:inherit;';
+    }
   };
 
   return AppBuilder;
