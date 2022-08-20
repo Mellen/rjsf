@@ -80,8 +80,10 @@ export const rjsf = (function()
   AppBuilder.prototype.updateElement = function(el)
   {
     const property = el.dataset.model;
+    console.log(el.tagName);
     if(el.tagName === 'RJSF-IF')
     {
+      console.log('if statement');
       this.rjsfif(el, property)
     }
     else
