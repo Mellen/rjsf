@@ -43,7 +43,7 @@ export const rjsf = (function()
       	  _internal.updateElement(el);
         }     
         
-        return _internal.originalViewmodel.data[name];
+        return true;
       }
     });
     
