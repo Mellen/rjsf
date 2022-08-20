@@ -1,4 +1,4 @@
-const rjsf = (function()
+export const rjsf = (function()
 {
   function AppBuilder(baseElement)
   {
