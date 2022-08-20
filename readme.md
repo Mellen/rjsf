@@ -12,4 +12,6 @@ This is not about making a framework to replace Vue.js or anything like that. It
 
 Javascript frameworks often seem to me like incredible works, and they are, and making anything similar, despite being a waste of time, is something I couldn't do. But, well, I could. I not a bad programmer, I can figure these things out. So I will.
 
+I am blogging about this on [dev.to](https://dev.to/mellen/series/18894).
+
 (N.B. fill out the readme more when I make examples.)
