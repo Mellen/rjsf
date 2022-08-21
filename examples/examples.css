@@ -16,7 +16,6 @@ body
 
 .example::before
 {
-    content: "HTML";
     color: black;
     background: white;
     display: block;
