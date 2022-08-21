@@ -26,7 +26,7 @@ body
     margin-left: -1rem;
 }
 
-example-html::before
+.example-html::before
 {
     content: "HTML";
 }
