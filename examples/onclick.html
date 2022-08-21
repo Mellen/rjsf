@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RJSF examples: onclick handler</title>
+    <link rel="icon" href="../rjsf_logo_icon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="examples.css">
+  </head>
+  <body>
+    <h1>onclick Example</h1>
+
+    <p>Clicking on things is very common on web sites. This example shows how to bind a function to the click handler of a button.</p>
+
+    <div class="example example-html">
+&lt;div id="app"&gt;
+  &lt;p data-model="message"&gt;&lt;/p&gt;
+  &lt;button onclick="changeMessage"&gt;Make a change&lt;/button&gt;
+&lt;/div&gt;
+    </div>
+
+    <div class="example example-js">
+import {rjsf} from '../rjsf.js'
+
+(function()
+{
+  const appElement = document.getElementById('app');
+
+  const app = new rjsf(appElement);
+
+  const viewmodel =
+        {
+          functions:
+          {
+            changeMessage: function(e)
+            {
+              e.preventDefault();
+              const v = this;
+              v.data.message = 'Now this message is.';
+              setTimeout(() => v.data.message = 'This message is here.', 1000);
+            }
+          },
+          data:
+          {
+            message: 'This message is here.',
+          }
+        };
+
+  app.init(viewmodel);
+
+})();
+    </div>
+    
+    <div class="example-output">
+      <div id="app">
+        <p data-model="message"></p>
+        <button onclick="changeMessage">Make a change</button>
+      </div>
+    </div>
+
+    
+    <p>
+      <a href="index.html">Back to example index</a>
+    </p>
+
+    <script type="module" src="onclick_example.js"></script>
+  </body>
+</html>
+
