@@ -1,8 +1,14 @@
+body
+{
+    font-family:sans;
+}
+
 .example
 {
     white-space:pre-wrap;
-    background-color:dark-grey;
+    background-color:#292929;
     color:white;
     font-family:monospace, monospace;
+    margin-bottom:1rem;
 }
     
