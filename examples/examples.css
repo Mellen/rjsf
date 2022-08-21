@@ -1,14 +1,56 @@
 body
 {
-    font-family:sans;
+    font-family: sans;
 }
 
 .example
 {
-    white-space:pre-wrap;
-    background-color:#292929;
-    color:white;
-    font-family:monospace, monospace;
-    margin-bottom:1rem;
+    white-space: pre-wrap;
+    background-color: #292929;
+    color: white;
+    font-family: monospace, monospace;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    width:50%;
 }
-    
+
+.example::before
+{
+    content: "HTML";
+    color: black;
+    background: white;
+    display: block;
+    font-family: sans;
+    font-size: 1.5rem;
+    padding-bottom: 2px;
+    margin-left: -1rem;
+}
+
+example-html::before
+{
+    content: "HTML";
+}
+
+.example-js::before
+{
+    content: "JS";
+}
+
+.example-output
+{
+    border: 2px solid darkgrey;
+    padding: 1rem;
+    padding-top: 0;
+    width:50%;
+}
+
+.example-output::before
+{
+    content: "Output";
+    font-size: 1.5rem;
+    background: white;
+    margin-left: -0.7rem;
+    display: inline-block;
+    position: relative;
+    top: -1rem;
+}

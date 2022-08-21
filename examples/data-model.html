@@ -14,15 +14,33 @@
     </p>
 
     <div class="example example-html">
-  &lt;div id="app"&gt;
-    &lt;span data-model="message"&gt;&lt;/span&gt;
-  &lt;/div&gt;
+&lt;div id="app"&gt;
+  &lt;span data-model="message"&gt;&lt;/span&gt;
+&lt;/div&gt;
     </div>
     
     <div class="example example-js">
+import {rjsf} from '../rjsf.js'
+
+(function()
+{
+  const appElement = document.getElementById('app');
+
+  const app = new rjsf(appElement);
+
+  const viewmodel = 
+        {
+          data:
+          {
+            message: 'hello world',
+          }
+        };
+
+  app.init(viewmodel);
+})();      
     </div>
     
-    <div class="output">
+    <div class="example-output">
       <div id="app">
         <span data-model="message"></span>
       </div>
