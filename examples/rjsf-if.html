@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RJSF examples: rjsf-if</title>
+    <link rel="icon" href="../rjsf_logo_icon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="examples.css">
+  </head>
+  <body>
+    <h1>&lt;rjsf-if&gt; Example</h1>
+
+    <p>The if statement evaluates a property of the model and hides or displays an element based on that</p>
+
+    <div class="example example-html">
+&lt;div id="app"&gt;
+  &lt;rjsf-if data-model="showThing"&gt;
+    &lt;p&gt;thing to be shown&lt;/p&gt;
+  &lt;/rjsf-if&gt;
+  &lt;button onclick="toggleShowThing"&gt;Toggle&lt;/button&gt;
+&lt;/div&gt;
+    </div>
+
+    <div class="example example-js">
+import {rjsf} from '../rjsf.js'
+
+(function()
+{
+  const appElement = document.getElementById('app');
+
+  const app = new rjsf(appElement);
+
+  const viewmodel = 
+        {
+          functions:
+          {
+            toggleShowThing: function(e)
+            {
+              e.preventDefault();
+              this.data.showThing = !this.data.showThing;              
+            }
+          },
+          data:
+          {
+            showThing: true,
+          }
+        };
+
+  app.init(viewmodel);
+
+})();      
+    </div>
+    
+    <div class="example-output">
+      <div id="app">
+        <rjsf-if data-model="showThing">
+          <p>thing to be shown</p>
+        </rjsf-if>
+        <button onclick="toggleShowThing">Toggle</button>
+      </div>
+    </div>
+
+    
+    <p>
+      <a href="index.html">Back to example index</a>
+    </p>
+
+    <script type="module" src="rjsfif_example.js"></script>
+  </body>
+</html>
