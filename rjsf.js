@@ -83,10 +83,8 @@ export const rjsf = (function()
   AppBuilder.prototype.updateElement = function(el)
   {
     const property = el.dataset.model;
-    console.log(el.tagName);
     if(el.tagName === 'RJSF-IF')
     {
-      console.log('if statement');
       this.rjsfif(el, property)
     }
     else
@@ -97,7 +95,7 @@ export const rjsf = (function()
 
   AppBuilder.prototype.rjsfif = function(el, prop)
   {
-    if(this.data[property])
+    if(!this.data[prop])
     {
       el.style='display:none;';
     }
