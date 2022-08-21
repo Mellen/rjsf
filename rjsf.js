@@ -74,7 +74,10 @@ export const rjsf = (function()
       }
     }
 
-    this.originalViewmodel.finishedInit.bind(_internal)();
+    if(this.originalViewmodel.finishedInit)
+    {
+      this.originalViewmodel.finishedInit.bind(_internal)();
+    }
   };
 
   AppBuilder.prototype.updateElement = function(el)
