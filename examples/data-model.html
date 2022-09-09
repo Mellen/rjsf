@@ -13,13 +13,16 @@
       The most basic operation you can perform with the framework is to show a variable in the page.
     </p>
 
-    <div class="example example-html">
+    <div class="container">
+      <div class="example example-html">
 &lt;div id="app"&gt;
   &lt;span data-model="message"&gt;&lt;/span&gt;
 &lt;/div&gt;
+      </div>
     </div>
-    
-    <div class="example example-js">
+
+    <div class="container">
+      <div class="example example-js">
 import {rjsf} from '../rjsf.js'
 
 (function()
@@ -38,13 +41,16 @@ import {rjsf} from '../rjsf.js'
 
   app.init(viewmodel);
 })();      
-    </div>
-    
-    <div class="example-output">
-      <div id="app">
-        <span data-model="message"></span>
       </div>
     </div>
+
+    <div class="container">
+      <div class="example-output">
+        <div id="app">
+          <span data-model="message"></span>
+        </div>
+      </div>
+    <div>
 
     <p>
       <a href="index.html">Back to example index</a>

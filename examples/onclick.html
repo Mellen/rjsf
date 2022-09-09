@@ -11,14 +11,17 @@
 
     <p>Clicking on things is very common on web sites. This example shows how to bind a function to the click handler of a button.</p>
 
-    <div class="example example-html">
+    <div class="container">
+      <div class="example example-html">
 &lt;div id="app"&gt;
   &lt;p data-model="message"&gt;&lt;/p&gt;
   &lt;button onclick="changeMessage"&gt;Make a change&lt;/button&gt;
 &lt;/div&gt;
+      </div>
     </div>
 
-    <div class="example example-js">
+    <div class="container">
+      <div class="example example-js">
 import {rjsf} from '../rjsf.js'
 
 (function()
@@ -48,12 +51,15 @@ import {rjsf} from '../rjsf.js'
   app.init(viewmodel);
 
 })();
+      </div>
     </div>
-    
-    <div class="example-output">
-      <div id="app">
-        <p data-model="message"></p>
-        <button onclick="changeMessage">Make a change</button>
+
+    <div class="container">
+      <div class="example-output">
+        <div id="app">
+          <p data-model="message"></p>
+          <button onclick="changeMessage">Make a change</button>
+        </div>
       </div>
     </div>
 

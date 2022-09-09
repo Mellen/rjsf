@@ -11,16 +11,19 @@
 
     <p>The if statement evaluates a property of the model and hides or displays an element based on that</p>
 
-    <div class="example example-html">
+    <div class="container">
+      <div class="example example-html">
 &lt;div id="app"&gt;
   &lt;rjsf-if data-model="showThing"&gt;
     &lt;p&gt;thing to be shown&lt;/p&gt;
   &lt;/rjsf-if&gt;
   &lt;button onclick="toggleShowThing"&gt;Toggle&lt;/button&gt;
 &lt;/div&gt;
+      </div>
     </div>
 
-    <div class="example example-js">
+    <div class="container">
+      <div class="example example-js">
 import {rjsf} from '../rjsf.js'
 
 (function()
@@ -48,14 +51,17 @@ import {rjsf} from '../rjsf.js'
   app.init(viewmodel);
 
 })();      
+      </div>
     </div>
-    
-    <div class="example-output">
-      <div id="app">
-        <rjsf-if data-model="showThing">
-          <p>thing to be shown</p>
-        </rjsf-if>
-        <button onclick="toggleShowThing">Toggle</button>
+
+    <div class="container">
+      <div class="example-output">
+        <div id="app">
+          <rjsf-if data-model="showThing">
+            <p>thing to be shown</p>
+          </rjsf-if>
+          <button onclick="toggleShowThing">Toggle</button>
+        </div>
       </div>
     </div>
 
