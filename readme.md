@@ -14,4 +14,4 @@ Javascript frameworks often seem to me like incredible works, and they are, and 
 
 I am blogging about this on [dev.to](https://dev.to/mellen/series/18894).
 
-(N.B. fill out the readme more when I make examples.)
+There are examples of use in the [examples](examples) folder.
