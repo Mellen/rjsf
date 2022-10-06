@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RJSF examples: onclick handler</title>
+    <link rel="icon" href="../rjsf_logo_icon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="examples.css">
+  </head>
+  <body>
+    <h1>onclick Example</h1>
+
+    <p>Clicking on things is very common on web sites. This example shows how to bind a function to the click handler of a button.</p>
+
+    <div class="container">
+      <div class="example example-html">
+&lt;div id="app"&gt;
+  &lt;input type="text" onkeyup="annoy"&gt;
+&lt;/div&gt;
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="example example-js">
+import {rjsf} from '../rjsf.js'
+
+(function()
+{
+  const appElement = document.getElementById('app');
+
+  const app = new rjsf(appElement);
+
+  const viewmodel = 
+        {
+          functions:
+          {
+            annoy: function(e)
+            {
+              e.preventDefault();
+              alert('this is annoying isn\'t it?');
+            }
+          },
+        };
+
+  app.init(viewmodel);
+
+})();
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="example-output">
+        <div id="app">
+          <input type="text" onkeyup="annoy">
+        </div>
+      </div>
+    </div>
+    
+    <p>
+      <a href="index.html">Back to example index</a>
+    </p>
+
+    <script type="module" src="onkeyup_example.js"></script>
+  </body>
+</html>
+

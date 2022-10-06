@@ -62,16 +62,21 @@ export const rjsf = (function()
         
         this.updateElement(el);
       }
-      
-      if(el.getAttribute('onclick'))
+
+      for(let attr of el.attributes)
       {
-    	let onclick = el.getAttribute('onclick');
-        el.setAttribute('onclick', '');
-    	if(onclick in _internal.originalViewmodel.functions)
+        if(attr.name.startsWith('on'))
         {
-          el.addEventListener('click', _internal.originalViewmodel.functions[onclick].bind(_internal));
+          let eventName = attr.name.substring(2);
+          let eventHandlerName = attr.value;
+          if(eventHandlerName in _internal.originalViewmodel.functions)
+          {
+            el.setAttribute(attr.name, '');
+            el.addEventListener(eventName, _internal.originalViewmodel.functions[eventHandlerName].bind(_internal));
+          }
+
         }
-      }
+      }      
     }
 
     if(this.originalViewmodel.finishedInit)
